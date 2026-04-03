@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage event — Event Photo Pages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="dashboard.html" class="brand">Event<span>Photo</span></a>
+      <nav style="display: flex; gap: 0.5rem; flex-wrap: wrap">
+        <a href="dashboard.html" class="btn btn--ghost btn--small">Dashboard</a>
+        <button type="button" class="btn btn--ghost btn--small" id="btn-logout">Log out</button>
+      </nav>
+    </header>
+    <main class="container container--wide" id="main"></main>
+    <input type="file" id="owner-file" accept="image/*" class="sr-only" multiple />
+    <script src="js/store.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js" crossorigin="anonymous"></script>
+    <script src="js/manage.js"></script>
+  </body>
+</html>

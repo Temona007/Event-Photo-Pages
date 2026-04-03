@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — Event Photo Pages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="dashboard.html" class="brand">Event<span>Photo</span></a>
+      <nav style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap">
+        <span id="user-greet" class="muted" style="font-size: 0.85rem"></span>
+        <a href="admin.html" class="btn btn--ghost btn--small" id="nav-admin" hidden>Admin</a>
+        <a href="payments.html" class="btn btn--ghost btn--small">Payments</a>
+        <button type="button" class="btn btn--ghost btn--small" id="btn-logout">Log out</button>
+      </nav>
+    </header>
+    <main class="container container--wide">
+      <div class="card" style="animation-delay: 0s">
+        <h2>Your events</h2>
+        <p class="muted" style="margin-top: -0.25rem">
+          Create a page, get a print-ready QR code, and collect guest photos (approved before they go
+          live).
+        </p>
+        <button type="button" class="btn btn--primary" id="btn-open-create">+ New event</button>
+      </div>
+
+      <div id="create-panel" class="card mt-2" style="display: none; animation-delay: 0.05s">
+        <h2 style="margin-top: 0">New event</h2>
+        <form id="form-create">
+          <div class="field">
+            <label for="ev-name">Event name</label>
+            <input type="text" id="ev-name" required placeholder="e.g. Sarah & Jordan" />
+          </div>
+          <div class="field">
+            <label for="ev-date">Date</label>
+            <input type="date" id="ev-date" />
+          </div>
+          <div class="field">
+            <label for="ev-msg">Message (optional)</label>
+            <textarea id="ev-msg" placeholder="A welcome note for guests"></textarea>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap">
+            <button type="submit" class="btn btn--primary">Create &amp; open</button>
+            <button type="button" class="btn btn--ghost" id="btn-cancel-create">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="event-list-wrap" class="mt-2"></div>
+    </main>
+    <script src="js/store.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in — Event Photo Pages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="index.html" class="brand">Event<span>Photo</span></a>
+      <a href="index.html" class="btn btn--ghost btn--small">Home</a>
+    </header>
+    <main class="container" style="max-width: 420px; padding-top: 2rem">
+      <div class="card" style="animation-delay: 0.05s">
+        <h2 style="font-family: var(--font-display); margin-top: 0">Welcome back</h2>
+        <p class="muted" style="margin-top: -0.5rem; margin-bottom: 1.25rem">
+          Credentials are prefilled for the MVP — tap Log in to continue.
+        </p>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap">
+          <button type="button" class="btn btn--ghost btn--small" id="tab-login" aria-pressed="true">
+            Log in
+          </button>
+          <button type="button" class="btn btn--ghost btn--small" id="tab-signup" aria-pressed="false">
+            Sign up
+          </button>
+        </div>
+        <form id="form-login" autocomplete="on">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="demo@demo.com" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="demo123" required />
+          </div>
+          <button type="submit" class="btn btn--primary btn-block">Log in</button>
+        </form>
+        <form id="form-signup" hidden autocomplete="on">
+          <div class="field">
+            <label for="su-name">Name</label>
+            <input type="text" id="su-name" name="name" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="su-email">Email</label>
+            <input type="email" id="su-email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="su-password">Password</label>
+            <input type="password" id="su-password" name="password" required minlength="4" />
+          </div>
+          <button type="submit" class="btn btn--primary btn-block">Create account</button>
+        </form>
+        <p class="muted mt-2" style="font-size: 0.85rem; margin-bottom: 0">
+          Admin demo: <strong>admin@demo.com</strong> / <strong>admin123</strong>
+        </p>
+      </div>
+    </main>
+    <script src="js/store.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
